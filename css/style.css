@@ -164,38 +164,87 @@ p {
       height: 100vh; }
       .content .main .main_text .text {
         margin: 12% auto;
-        padding-left: 90px; }
+        padding-left: 90px;
+        position: relative; }
+@-webkit-keyframes anim {
+  from {
+    top: 0;
+    opacity: 1; }
+  to {
+    top: 100px;
+    opacity: 0.1; } }
+@keyframes anim {
+  from {
+    top: 0;
+    opacity: 1; }
+  to {
+    top: 100px;
+    opacity: 0.1; } }
+@-webkit-keyframes anim_rev {
+  from {
+    top: 100px;
+    opacity: 0.1; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes anim_rev {
+  from {
+    top: 100px;
+    opacity: 0.1; }
+  to {
+    top: 0;
+    opacity: 1; } }
         .content .main .main_text .text h1 {
           width: 1100px;
           padding: 30px;
           font-size: 80px; }
-  .content .link {
-    position: absolute;
-    padding: 10px;
-    left: 50%;
-    margin-left: -60px;
-    bottom: 22.5%;
-    color: #fff;
-    font-size: 20px; }
-    .content .link svg {
-      height: 47px;
-      left: 48%;
+    .content .main .link {
       position: absolute;
-      top: 0px;
-      width: 46px;
-      margin-left: -23px;
-      z-index: -2; }
-      .content .link svg polygon {
-        fill: #38c481;
-        fill-opacity: 0;
-        stroke: #38c481;
-        -webkit-transition: all .6s linear;
-        transition: all .6s linear; }
-    .content .link:hover {
-      text-decoration: none;
-      color: #fff; }
-      .content .link:hover polygon {
-        fill-opacity: 1; }
+      padding: 10px;
+      left: 50%;
+      margin-left: -60px;
+      bottom: 22.5%;
+      color: #fff;
+      font-size: 20px; }
+@-webkit-keyframes anim_svg {
+  from {
+    bottom: 22.5%; }
+  to {
+    bottom: 17.5%; } }
+@keyframes anim_svg {
+  from {
+    bottom: 22.5%; }
+  to {
+    bottom: 17.5%; } }
+@-webkit-keyframes anim_rev_svg {
+  from {
+    bottom: 17.5%; }
+  to {
+    bottom: 22.5%; } }
+@keyframes anim_rev_svg {
+  from {
+    bottom: 17.5%; }
+  to {
+    bottom: 22.5%; } }
+      .content .main .link svg {
+        height: 47px;
+        left: 48%;
+        position: absolute;
+        top: 0px;
+        width: 46px;
+        margin-left: -23px;
+        z-index: -2; }
+        .content .main .link svg polygon {
+          fill: #38c481;
+          fill-opacity: 0;
+          stroke: #38c481;
+          -webkit-transition: all .6s linear;
+          transition: all .6s linear; }
+      .content .main .link:hover {
+        text-decoration: none;
+        color: #fff; }
+        .content .main .link:hover polygon {
+          fill-opacity: 1; }
   .content .work {
     background: #f8f8f8;
     z-index: 2;

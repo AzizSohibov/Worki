@@ -10,13 +10,22 @@ $(document).ready(function () {
         var section4 = $("#section4").offset().top;
         var height_work = section3 - section2;
         var height_foot = section3 - section4;
+        var rt = section1 / 2;
 
 $(".work .section" ).css("height", height_work);
 $(".work" ).css("height", height_work);
 
 $(window).scroll(function (e) {
+    console.log(rt);
     s_top = $(window).scrollTop();
     $(".section_wrap .section").removeClass('focus');
+    if(s_top>= (section1 - (section1 / 2)))
+    $(".content .main .main_text .text").css("animation"," anim 2s ease-in-out");
+    $(".content .main .link").css("animation"," anim_svg 2s ease-in-out");
+
+    if(s_top<= (section1 - (section1 / 2)))
+    $(".content .main .main_text .text").css("animation"," anim_rev 2s ease-in-out");
+    $(".content .main .link").css("animation"," anim_rev_svg 2s ease-in-out");
 
     if (s_top >= section1 && s_top <= section2)
     $(".main .section ").addClass('focus');
@@ -38,10 +47,10 @@ $(window).scroll(function (e) {
 
     if (s_top >= section2 && s_top <= section3)
     $(".header .header_nav .nav_item a").css('color','#111');
-        $(".header").addClass('bg_head');
+
     if (s_top >= section2 && s_top <= section3)
     $(".header .logo .company_name ").css('color','#111');
-
+        $(".header").addClass('bg_head');
     if (s_top >= section2 && s_top <= section3)
     $(".header .header_nav ul li .lang").css('color','#111');
 
@@ -110,7 +119,6 @@ $(".content .about .screen1 .about_card .next_button").on("click",function(){
     $(".content .about .screen1").addClass('hide');
     $(".content .about .screen2").addClass('show');
 });
-
 
 $(".content .about .screen2 .about_card .next_button").on("click",function(){
     $(".content .about .screen2").removeClass('show');

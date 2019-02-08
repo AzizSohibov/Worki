@@ -204,6 +204,27 @@ $left_block_width: 320px;
         .text{
             margin: 12% auto;
             padding-left: 90px;
+            position: relative;
+            @keyframes anim{
+                from{
+                    top: 0;
+                    opacity: 1;
+                }
+                to{
+                    top: 100px;
+                    opacity: 0.1;
+                }
+            }
+            @keyframes anim_rev{
+                from{
+                    top: 100px;
+                    opacity: 0.1;
+                }
+                to{
+                    top:0;
+                    opacity: 1;
+                }
+            }
             h1{
                 width: 1100px;
                 padding: 30px;
@@ -211,8 +232,6 @@ $left_block_width: 320px;
                     }
                 }
             }
-        }
-
     .link{
         position: absolute;
         padding: 10px;
@@ -221,6 +240,22 @@ $left_block_width: 320px;
         bottom: 22.5%;
         color:#fff;
         font-size: 20px;
+        @keyframes anim_svg{
+            from{
+                bottom: 22.5%;;
+            }
+            to{
+                bottom: 17.5%;
+            }
+        }
+        @keyframes anim_rev_svg{
+            from{
+                bottom: 17.5%;
+            }
+            to{
+                bottom: 22.5%;
+            }
+        }
         svg{
             height: 47px;
             left: 48%;
@@ -242,6 +277,7 @@ $left_block_width: 320px;
             color:#fff;
             polygon{
                 fill-opacity: 1;
+                }
             }
         }
     }
