@@ -1,0 +1,9 @@
+$prefixes: ("-moz-", "");
+@mixin selection($color, $background) {
+	@each $prefix in $prefixes {
+		::#{$prefix}selection {
+			color: $color;
+			background: $background;
+		}
+	}
+}//@include selection(white, black);
